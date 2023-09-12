@@ -1,0 +1,37 @@
+﻿@page "/subscriptionpage"
+<h3>Subscrition Page</h3>
+
+<button class="btn btn-primary" @onclick=GetSubscriptionAsync>Get Subscription</button>
+<button class="btn btn-primary" @onclick=SendSubscriptionAsync>Send Subscription to Server</button>
+<button class="btn btn-primary" @onclick=RequestExampleNotificationAsync>
+    Request Example Notification
+</button>
+
+@if(SubscriptionInfo != default)
+{
+    <div class="mt-3 card">
+        <div class="card-body">
+            <div>
+                <div class="mt-3">Endpoint</div>
+                <div class="p-3 bg-dark text-white">@SubscriptionInfo.Endpoint</div>
+            </div>
+            <div>
+                <div class="mt-3">P256dh</div>
+                <div class="p-3 bg-dark text-white">@SubscriptionInfo.P256dh</div>
+            </div>
+            <div>
+                <div class="mt-3">Auth</div>
+                <div class="p-3 bg-dark text-white">@SubscriptionInfo.Auth</div>
+            </div>
+            <div>
+                <div class="mt-3">Is new Subscription?</div>
+                <div class="p-3 bg-dark text-white">@SubscriptionInfo.IsNewSubscription</div>
+            </div>
+        </div>
+    </div>
+}
+
+@if(!string.IsNullOrWhiteSpace(Message))
+{
+    <div class="m-3 alert alert-info">@Message</div>
+}

@@ -1,0 +1,14 @@
+{
+  "short_name": "Blazor PWA",
+  "name": "PWA Demo application",
+  "icons": [
+    {
+      "src": "images/pwaicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#860000",
+  "display":  "standalone"
+}
